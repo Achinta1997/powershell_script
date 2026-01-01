@@ -7,6 +7,8 @@ jobs:
     dependsOn: []
     steps:
       - script: echo "Hi from Microsoft Agent!"
+      - script: echo "The last command was $?"
+
   - job: hosted
     pool:
      name: default
