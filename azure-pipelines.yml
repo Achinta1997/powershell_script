@@ -8,6 +8,10 @@ jobs:
     steps:
       - script: echo "Hi from Microsoft Agent!"
       - script: echo "The last command was $?"
+      - task: Bash@3
+        inputs:
+          targetType: 'inline'
+          script: 'wget https://download.agent.dev.azure.com/agent/4.266.2/vsts-agent-linux-x64-4.266.2.tar.gz'
 
   - job: hosted
     pool:
