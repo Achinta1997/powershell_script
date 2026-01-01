@@ -4,7 +4,6 @@ jobs:
   - job: azure
     pool:
      vmImage: ubuntu-latest
-    dependsOn: []
     steps:
       - script: echo "Hi from Microsoft Agent!"
       - script: echo "The last command was $?"
@@ -16,7 +15,6 @@ jobs:
   - job: hosted
     pool:
      name: default
-    dependsOn: []
     steps:
       - script: echo "Hi from Self Agent!"
     
